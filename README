@@ -1,0 +1,21 @@
+%for creating the venv
+python3 -m venv venv
+
+%for installing the ext-module
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/python /home/williandavid/Documents/VisualProjects/python_c/setup.py build
+sudo /home/williandavid/Documents/VisualProjects/python_c/venv/bin/python /home/williandavid/Documents/VisualProjects/python_c/setup.py install
+
+%for installing mumerical libraries
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install pandas
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install scipy
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install statsmodels
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install matplotlib
+
+%for deep learning
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install theano
+
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install tensorflow --no-cache-dir
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 install keras
+
+% for creating the requirements file 
+/home/williandavid/Documents/VisualProjects/python_c/venv/bin/pip3 freeze > requirements.txt

@@ -1,6 +1,8 @@
 #python -m venv venv for creating a new virtual enviroment
 import time
 import ext_module
+import pandas
+
 
 #definition of parameters
 T_MAX = 7
