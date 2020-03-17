@@ -3,6 +3,7 @@ python3 -m venv venv
 
 %for installing the ext-module
 /home/williandavid/Documents/VisualProjects/python_c/venv/bin/python /home/williandavid/Documents/VisualProjects/python_c/setup.py build
+
 sudo /home/williandavid/Documents/VisualProjects/python_c/venv/bin/python /home/williandavid/Documents/VisualProjects/python_c/setup.py install
 
 %for installing mumerical libraries

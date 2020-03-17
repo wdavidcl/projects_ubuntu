@@ -1,25 +1,29 @@
 #python -m venv venv for creating a new virtual enviroment
 import time
 import ext_module
-import pandas
-
+import pandas as pd
 
 #definition of parameters
-T_MAX = 7
-t = 0
-reference = 4.527
-
+T_MAX = 10
+reference = [2,7,13,4,9,1]
 #definition of functions
 def controller(w,y):
   return -1.4048*(y)+2.4048*w
 
 y=0
-while t<T_MAX:
+samples = pd.DataFrame({})
+for values in reference:
+  t = 0
+  while t<T_MAX:
 
-  u=controller(reference,y)
-  y=ext_module.plant(u)
-  print(y)
-  t=0.1+t
-  time.sleep(0.1)
+    u = controller(values,y)
+    x = ext_module.plant(u)
+    y = x
+    print(y)
+    samples=samples.append({"u":u,"x":x,"y":y},ignore_index = True)
+    t = 0.1+t
+    time.sleep(0.1)
 
 ext_module.print('this works')
+print(samples)
+samples.to_csv('plant_samples.csv',index_label=False, index=False)
