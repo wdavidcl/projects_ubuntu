@@ -4,8 +4,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-pd.read_csv('plant_samples.csv')
-
 u = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17],  dtype=int)
 y = np.array([5,6,7,10,13,13,14,15,15,17,17,19,21,23,37,58,111],  dtype=float)
 

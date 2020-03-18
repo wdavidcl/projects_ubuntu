@@ -14,7 +14,7 @@ y=0
 samples = pd.DataFrame({})
 for values in reference:
   t = 0
-  while t<T_MAX:
+  while t<=T_MAX:
     #u = controller(values,y)
     x = ext_module.plant(values)
     y = x
