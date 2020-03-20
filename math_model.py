@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 # Load training data
-u = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18],  dtype=int)
-y = np.array([5,6,7,10,13,14,15,16,17,17,18,19,21,23,37,58,111,168],  dtype=float)
+u = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19],  dtype=int)
+y = np.array([5,6,7,10,13,14,15,16,17,17,18,19,21,23,37,58,111,168,260],  dtype=float)
 plt.xlim(0,30)
 plt.ylim(0,1500)
 plt.xlabel('(Marzo)')
@@ -24,7 +24,7 @@ model.add(Dense(20, activation='relu'))
 model.add(Dense(10, activation='relu'))
 model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
-model.fit(u, y, epochs=3000, batch_size=2)
+model.fit(u, y, epochs=3000, batch_size = 3)
 
 predictions = model.predict(u_pred)
 df2 = pd.DataFrame()

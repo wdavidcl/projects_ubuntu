@@ -5,7 +5,7 @@ import pandas as pd
 import tensorflow as tf
 #definition of parameters
 T_MAX = 10
-reference = [2,7,13,4,9,1]
+reference = [2,7,13,4,9,1,15,10,8,6,9,0]
 #definition of functions
 def controller(w,y):
   return -1.4048*(y)+2.4048*w
