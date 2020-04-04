@@ -7,8 +7,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
-step = 2
-
+step = 1
 
 with open('model_in_json.json','r') as f:
     model_json = json.load(f)

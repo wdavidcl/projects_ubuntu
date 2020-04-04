@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import json
 
-step = 2
+step = 1
 
 def convertToMatrix(y_k,u_k, step):
     X, Y =[], []
@@ -43,7 +43,7 @@ model.add(Dense(1))
 model.compile(loss='mean_squared_error', optimizer='adam')
 model.summary()
 
-model.fit(trainX,trainY, epochs=50, batch_size=8, verbose=2)
+model.fit(trainX,trainY, epochs=100, batch_size=4, verbose=2)
 prediction = model.predict(trainX)
 
 test = np.append(test,np.repeat(test[-1,],step))
