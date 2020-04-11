@@ -2,7 +2,7 @@
 import time
 import ext_module
 import pandas as pd
-import tensorflow as tf
+
 #definition of parameters
 T_MAX = 10
 reference = [2,7,13,4,9,1,15,10,8,6,9,0]

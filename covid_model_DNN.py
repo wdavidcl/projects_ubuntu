@@ -35,7 +35,7 @@ df_out = pd.merge(df,df2,how = 'left',left_index = True, right_index = True)
 df_out.to_csv('covid.csv',index_label=False,index=False)
 
 plt.plot(u_pred, predictions, 'r','*') # plotting t, b separately 
-plt.savefig('EC_covid-19_DNN.png')
+plt.savefig('/results/EC_covid-19_DNN.png')
 #plt.show()
 
 

@@ -63,5 +63,5 @@ plt.grid()
 plt.plot(u_k, y_k, '+') # plotting t, a separately 
 plt.plot(u_final, prediction, '*','r') # plotting t, a separately 
 #plt.axvline(y_k.index[l_train], c="y")
-plt.savefig('covid-19_EC_RNN.png')
+plt.savefig('./results/covid-19_EC_RNN.png')
 #plt.show()
