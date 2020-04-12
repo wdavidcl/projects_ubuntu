@@ -25,7 +25,7 @@ u_test = np.concatenate((u_test,4.5*np.ones(200)),axis=0)
 
 # load dataset - simulink
 
-data = pd.read_csv('heater.csv')
+data = pd.read_csv('./assets/heater.csv')
 y_k = data.iloc[:, 0:1]
 u_k = data.iloc[:, 1:2]
 

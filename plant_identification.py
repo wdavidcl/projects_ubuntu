@@ -16,7 +16,7 @@ def convertToMatrix(y_k,u_k, step):
         Y.append(y_k[d,])
     return np.array(X), np.array(Y)
 
-data = pd.read_csv('./results/heater.csv')
+data = pd.read_csv('./assets/heater.csv')
 y_k = data.iloc[:, 0:1]
 u_k = data.iloc[:, 1:2]
 

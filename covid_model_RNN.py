@@ -16,8 +16,8 @@ def convertToMatrix(y_k,u_k, step):
         Y.append(y_k[d,])
     return np.array(X), np.array(Y)
 
-y_k = np.array([5,6,7,10,13,14,15,16,17,17,18,19,21,23,37,58,111,168,260,426,532,789],  dtype=float)
-u_k = u = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22],  dtype=int)
+y_k = np.array([5,6,7,10,13,14,15,16,17,17,18,19,21,23,37,58,111,168,260,426,532,789,981,1082,1211,1403,1627,1835,1924,1966,2302],  dtype=float)
+u_k = u = np.array([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31],  dtype=int)
 
 l_dataset = len(u_k)
 l_train = int(1*l_dataset)
@@ -64,4 +64,4 @@ plt.plot(u_k, y_k, '+') # plotting t, a separately
 plt.plot(u_final, prediction, '*','r') # plotting t, a separately 
 #plt.axvline(y_k.index[l_train], c="y")
 plt.savefig('./results/covid-19_EC_RNN.png')
-#plt.show()
+plt.show()
