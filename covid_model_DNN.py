@@ -16,7 +16,7 @@ u = np.arange(1,len(y)+1, dtype = int)
 plt.xlabel('(Mes)')
 plt.ylabel('(Covid-19 casos confirmados)')
 plt.plot(u,y, '*') # plotting t, a separately 
-plt.show()
+#plt.show()
 days_ahead=15
 u_pred = np.arange(1,len(y)+days_ahead, dtype= int)+1
 df = pd.DataFrame(data = u_pred,columns=['Mes'])
@@ -28,8 +28,8 @@ model.add(Dense(40, input_dim=1, activation='relu'))
 model.add(Dense(20, activation='relu'))
 model.add(Dense(10, activation='relu'))
 model.add(Dense(1))
-model.compile(loss='mean_squared_error', optimizer='adamax')
-model.fit(u, y, epochs=5000, batch_size = 4)
+model.compile(loss='mean_squared_error', optimizer='adam')
+model.fit(u, y, epochs=5000, batch_size = 2)
 
 predictions = model.predict(u_pred)
 
