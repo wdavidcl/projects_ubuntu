@@ -5,6 +5,9 @@ from keras.layers import Conv1D, LeakyReLU, Flatten, LSTM, SimpleRNN
 import matplotlib.pyplot as plt
 import pandas as pd
 import json
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2' 
+#import tensorflow as tf
 
 step = 1
 
